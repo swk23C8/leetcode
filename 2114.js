@@ -2,8 +2,19 @@
  * @param {string[]} sentences
  * @return {number}
  */
- var mostWordsFound = function(sentences) {
-    
+var mostWordsFound = function (sentences) {
+   let max = 0;
+   for (sentence of sentences){
+         let words = sentence.split(" ");
+         let count = 0;
+         for (word of words){
+            count += 1;
+         }
+         if (count > max){
+            max = count;
+         }
+   }
+   return max;
 };
 
 // A sentence is a list of words that are separated by a single space with no leading or trailing spaces.
@@ -14,7 +25,7 @@
 
 // Input: sentences = ["alice and bob love leetcode", "i think so too", "this is great thanks very much"]
 // Output: 6
-// Explanation: 
+// Explanation:
 // - The first sentence, "alice and bob love leetcode", has 5 words in total.
 // - The second sentence, "i think so too", has 4 words in total.
 // - The third sentence, "this is great thanks very much", has 6 words in total.
