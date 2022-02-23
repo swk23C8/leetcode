@@ -10,8 +10,8 @@
  * @param {string} b
  * @return {string}
  */
-var addBinary = function(a, b) {
-    
+var addBinary = function (a, b) {
+
 };
 // @lc code=end
 
