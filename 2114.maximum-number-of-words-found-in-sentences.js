@@ -10,7 +10,22 @@
  * @return {number}
  */
 var mostWordsFound = function (sentences) {
-	for ()
+	let max = 0;
+
+	for (let i = 0; i < sentences.length; i++) {
+		let currentWord = sentences[i]
+		let currentCount = 1;
+
+		for (let j = 0; j < currentWord.length; j++) {
+			if (currentWord[j] == ' ') {
+				currentCount++;
+			}
+			if (currentCount > max) {
+				max = currentCount;
+			}
+		}
+	}
+	return max;
 };
 // @lc code=end
 
